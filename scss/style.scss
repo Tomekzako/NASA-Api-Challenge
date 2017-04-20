@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 990px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.row {
+    &::after,
+    &::before {
+        display: table;
+        content: '';
+        clear: both;
+    }
+}
+
+body {
+    background: #000;
+}
+
+header {
+    background: #000;
+    position: relative;
+    background-size: cover;
+}
+
+.col1 {
+    position: relative;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+h1 {
+    color: aliceblue;
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.col12 {
+    height: 150px;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+    }
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #2F4F4F;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+li {
+    float: left;
+    padding: 10px;
+    img {
+        width: 144px;
+        height: 150px;
+    }
+}
+
+.btns {
+    margin-top: 15px;
+    text-align: center;
+}
+
+ button {
+        background-color: darkgrey;
+        width: 100px;
+        border-radius: 6px;
+        box-shadow: 0 0 14px 2px;
+        text-shadow: -1px 0 0;
+    }
+.fullScreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.7);
+    img {
+        display: block;
+        margin: 50px auto;
+        width: 400px;
+        height: 400px;
+    }
+    .closePic {
+        @extend button;
+        display: block;
+        margin: auto;
+    }
+}
